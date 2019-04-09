@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "456917595223",
+    "firebase_url": "https://contactlisapp-dsm001a.firebaseio.com",
+    "project_id": "contactlisapp-dsm001a",
+    "storage_bucket": "contactlisapp-dsm001a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456917595223:android:8933b4f29ae2a6c9",
+        "android_client_info": {
+          "package_name": "com.dsmastrodomenico.contactlistapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456917595223-dukhi1lf8hd7vhp8i5v2i9il2bgcnu3u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dsmastrodomenico.contactlistapp",
+            "certificate_hash": "f0a9224cfe7ff6c347d4a7dabefa1429189a6ca9"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP10AiJsupM0_C6CUjNR7kLndYy4EwbyA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "456917595223-k5qn5ku3nj04j263gijd9vm1iuaa8s3m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
