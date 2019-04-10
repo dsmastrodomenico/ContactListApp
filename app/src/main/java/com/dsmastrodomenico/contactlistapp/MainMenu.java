@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainMenu extends AppCompatActivity {
     private static final String TAG = "MainMenu";
@@ -32,7 +33,7 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
-
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         txtUserDetail = (TextView)findViewById(R.id.txtUserDetail);
         btnSignOut = (Button)findViewById((R.id.btnSignOut));
         inicialize();

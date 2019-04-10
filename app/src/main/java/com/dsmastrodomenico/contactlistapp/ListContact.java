@@ -26,10 +26,7 @@ public class ListContact extends AppCompatActivity {
     private ListView lvContacts;
     private TextView txtNoResults;
     private ArrayAdapter<String> arrayAdapter;
-    //private ArrayList<String> contactNames;
     private List<String> contactNames;
-    //private ArrayList<Contact> contacts;
-    //private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +35,15 @@ public class ListContact extends AppCompatActivity {
         lvContacts = (ListView)findViewById(R.id.lvcontacts);
         txtNoResults = (TextView)findViewById(R.id.txtNoResults);
         contactNames = new ArrayList<>();
-        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
         databaseReference = FirebaseDatabase.getInstance().getReference();
+
         arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, contactNames);
         lvContacts.setAdapter(arrayAdapter);
         //contacts = Data.get();
         //contactNames = new ArrayList<String>();
-        //txtNoResults.setVisibility(View.VISIBLE);
-        //lvContacts.setVisibility(View.INVISIBLE);
+        txtNoResults.setVisibility(View.VISIBLE);
+        lvContacts.setVisibility(View.INVISIBLE);
         databaseReference.child("USERS_NODE").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -68,15 +66,6 @@ public class ListContact extends AppCompatActivity {
 
             }
         });
-        //if (contacts.size() > 0) {
-        //    listView.setVisibility(View.VISIBLE);
-        //    txtNoResults.setVisibility(View.INVISIBLE);
-        //    for (int i = 0; i < contacts.size(); i++) {
-        //        contactNames.add(contacts.get(i).getName() + " " + contacts.get(i).getLastName());
-        //    }
-        //}
-        //ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, contactNames);
-        //listView.setAdapter(adapter);
         lvContacts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -86,4 +75,5 @@ public class ListContact extends AppCompatActivity {
             }
         });
     }
+
 }

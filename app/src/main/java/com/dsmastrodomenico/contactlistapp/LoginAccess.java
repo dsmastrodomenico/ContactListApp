@@ -17,14 +17,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class LoginAccess extends AppCompatActivity {
-
     private static final String TAG = "LoginAccess";
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
-
     private Button btnCreateAccount;
     private Button btnSignIn;
-
     private EditText edtEmail;
     private EditText edtPassword;
 
@@ -32,14 +29,11 @@ public class LoginAccess extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_access);
-
         btnCreateAccount = (Button)findViewById(R.id.btnCreateAccount);
         btnSignIn = (Button)findViewById(R.id.btnSignIn);
         edtEmail =(EditText)findViewById(R.id.edtEmail);
         edtPassword =(EditText)findViewById(R.id.edtPassword);
-
         inicialize();
-
         btnCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
