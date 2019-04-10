@@ -76,8 +76,12 @@ public class LoginAccess extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     Toast.makeText(LoginAccess.this, "Create Account Success", Toast.LENGTH_SHORT).show();;
+                    edtEmail.setText("");
+                    edtPassword.setText("");
                 }else{
                     Toast.makeText(LoginAccess.this, "Create Account Unsuccess", Toast.LENGTH_SHORT).show();;
+                    edtEmail.setText("");
+                    edtPassword.setText("");
                 }
             }
         });

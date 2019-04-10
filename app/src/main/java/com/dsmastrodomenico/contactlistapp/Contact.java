@@ -55,8 +55,8 @@ public class Contact {
         Cellphone = cellphone;
     }
 
-    public void saveContact(){
-        Data.save(this);
-    }
+    //public void saveContact(){
+    //    Data.save(this);
+    //}
 }
 

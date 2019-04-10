@@ -13,6 +13,7 @@
     <string name="cellphone">Cellphone</string>
     <string name="save">Save</string>
     <string name="done">Saved successfully</string>
+    <string name="empty_cell">Cant be blank space</string>
     <string name="no_records">No records to show</string>
     <string name="welcome">Welcome</string>
     <string name="signout_button">Sign Out</string>
