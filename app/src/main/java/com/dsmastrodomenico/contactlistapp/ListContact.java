@@ -10,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -17,46 +19,45 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ListContact extends AppCompatActivity {
     private static final String USERS_NODE = "users";
     private static final String TAG = "ListContact";
-    private ListView listView;
-    private TextView txtNoResults;
-    private ArrayAdapter arrayAdapter;
-    private List<String> contactNames;
     private DatabaseReference databaseReference;
-    //private ArrayList<Contact> contacts;
+    private ListView lvContacts;
+    private TextView txtNoResults;
+    private ArrayAdapter<String> arrayAdapter;
     //private ArrayList<String> contactNames;
+    private List<String> contactNames;
+    //private ArrayList<Contact> contacts;
     //private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contact_list);
-
+        lvContacts = (ListView)findViewById(R.id.lvcontacts);
+        txtNoResults = (TextView)findViewById(R.id.txtNoResults);
+        contactNames = new ArrayList<>();
         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         databaseReference = FirebaseDatabase.getInstance().getReference();
-        arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, contactNames);
-        listView.setAdapter(arrayAdapter);
-        listView = (ListView) findViewById(R.id.lvcontacts);
-        txtNoResults = (TextView)findViewById(R.id.txtNoResults);
+        arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, contactNames);
+        lvContacts.setAdapter(arrayAdapter);
         //contacts = Data.get();
         //contactNames = new ArrayList<String>();
-
-        txtNoResults.setVisibility(View.VISIBLE);
-        listView.setVisibility(View.INVISIBLE);
-        databaseReference.child(USERS_NODE).addValueEventListener(new ValueEventListener() {
+        //txtNoResults.setVisibility(View.VISIBLE);
+        //lvContacts.setVisibility(View.INVISIBLE);
+        databaseReference.child("USERS_NODE").addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            public void onDataChange(DataSnapshot dataSnapshot) {
                 contactNames.clear();
                 if(dataSnapshot.exists()){
+                    lvContacts.setVisibility(View.VISIBLE);
+                    txtNoResults.setVisibility(View.INVISIBLE);
+
                     for (DataSnapshot snapshot:dataSnapshot.getChildren()){
                         Contact contact = snapshot.getValue(Contact.class);
                         Log.w(TAG, "Contact Name: " + contact.getName() + " " + contact.getLastName());
-                        contactNames.add(contact.getName());
+                        contactNames.add(contact.getName() + " " + contact.getLastName());
                     }
                 }
                 arrayAdapter.notifyDataSetChanged();
@@ -67,22 +68,16 @@ public class ListContact extends AppCompatActivity {
 
             }
         });
-
-
-
         //if (contacts.size() > 0) {
         //    listView.setVisibility(View.VISIBLE);
         //    txtNoResults.setVisibility(View.INVISIBLE);
-
         //    for (int i = 0; i < contacts.size(); i++) {
         //        contactNames.add(contacts.get(i).getName() + " " + contacts.get(i).getLastName());
         //    }
         //}
-
         //ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, contactNames);
         //listView.setAdapter(adapter);
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lvContacts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent contactDetail = new Intent(ListContact.this, ContactDetail.class);
