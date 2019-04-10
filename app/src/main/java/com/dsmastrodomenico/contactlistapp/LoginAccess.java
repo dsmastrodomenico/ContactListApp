@@ -75,11 +75,11 @@ public class LoginAccess extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    Toast.makeText(LoginAccess.this, "Create Account Success", Toast.LENGTH_SHORT).show();;
+                    Toast.makeText(LoginAccess.this, R.string.create_account_success, Toast.LENGTH_SHORT).show();;
                     edtEmail.setText("");
                     edtPassword.setText("");
                 }else{
-                    Toast.makeText(LoginAccess.this, "Create Account Unsuccess", Toast.LENGTH_SHORT).show();;
+                    Toast.makeText(LoginAccess.this, R.string.create_account_unsuccess, Toast.LENGTH_SHORT).show();;
                     edtEmail.setText("");
                     edtPassword.setText("");
                 }
@@ -92,7 +92,7 @@ public class LoginAccess extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    Toast.makeText(LoginAccess.this, "Authentication Success", Toast.LENGTH_SHORT).show();;
+                    Toast.makeText(LoginAccess.this, R.string.authentication_success, Toast.LENGTH_SHORT).show();;
                     Intent access = new Intent(LoginAccess.this, MainMenu.class);
                     startActivity(access);
                     edtEmail.setText("");
@@ -100,7 +100,7 @@ public class LoginAccess extends AppCompatActivity {
                     finish();
 
                 }else{
-                    Toast.makeText(LoginAccess.this, "Authentication Unsuccess", Toast.LENGTH_SHORT).show();;
+                    Toast.makeText(LoginAccess.this, R.string.authentication_unsuccess, Toast.LENGTH_SHORT).show();;
                     edtEmail.setText("");
                     edtPassword.setText("");
                 }

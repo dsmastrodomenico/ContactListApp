@@ -14,6 +14,11 @@
     <string name="save">Save</string>
     <string name="done">Saved successfully</string>
     <string name="empty_cell">Cant be blank space</string>
+    <string name="create_account_success">Create Account Success</string>
+    <string name="create_account_unsuccess">Create Account Unsuccess</string>
+    <string name="authentication_success">Authentication Success</string>
+    <string name="authentication_unsuccess">Authentication Unsuccess</string>
+
     <string name="no_records">No records to show</string>
     <string name="welcome">Welcome</string>
     <string name="signout_button">Sign Out</string>
