@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -22,6 +23,7 @@ public class LoginAccess extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener authStateListener;
     private Button btnCreateAccount;
     private Button btnSignIn;
+    private SignInButton btnSignInGoogle;
     private EditText edtEmail;
     private EditText edtPassword;
 
@@ -31,6 +33,7 @@ public class LoginAccess extends AppCompatActivity {
         setContentView(R.layout.login_access);
         btnCreateAccount = (Button)findViewById(R.id.btnCreateAccount);
         btnSignIn = (Button)findViewById(R.id.btnSignIn);
+        btnSignInGoogle = (SignInButton)findViewById(R.id.btnSignInGoogle);
         edtEmail =(EditText)findViewById(R.id.edtEmail);
         edtPassword =(EditText)findViewById(R.id.edtPassword);
         inicialize();
