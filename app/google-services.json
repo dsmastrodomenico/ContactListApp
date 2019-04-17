@@ -21,6 +21,10 @@
             "package_name": "com.dsmastrodomenico.contactlistapp",
             "certificate_hash": "f0a9224cfe7ff6c347d4a7dabefa1429189a6ca9"
           }
+        },
+        {
+          "client_id": "456917595223-k5qn5ku3nj04j263gijd9vm1iuaa8s3m.apps.googleusercontent.com",
+          "client_type": 3
         }
       ],
       "api_key": [

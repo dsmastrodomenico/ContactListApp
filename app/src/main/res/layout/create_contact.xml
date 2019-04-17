@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,7 +14,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/create"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            />
 
         <EditText
             android:id="@+id/name"
@@ -20,7 +23,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/name"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            />
 
         <EditText
             android:id="@+id/lastName"
@@ -28,7 +32,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/lastname"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            />
 
         <EditText
             android:id="@+id/phone"
@@ -36,7 +41,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/phone"
-            android:inputType="phone" />
+            android:inputType="phone"
+            />
 
         <EditText
             android:id="@+id/cellphone"
@@ -44,7 +50,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/cellphone"
-            android:inputType="phone" />
+            android:inputType="phone"
+            />
 
         <Button
             android:id="@+id/button"
@@ -52,6 +59,7 @@
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
             android:onClick="save"
-            android:text="@string/save" />
+            android:text="@string/save"
+            />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
