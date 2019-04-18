@@ -23,6 +23,7 @@
     <string name="welcome">Welcome</string>
     <string name="signout_button">Sign Out</string>
     <string name="login">Login</string>
+    <string name="login_google">Login With Google</string>
 
     <string-array name="Menu">
         <item>@string/create</item>

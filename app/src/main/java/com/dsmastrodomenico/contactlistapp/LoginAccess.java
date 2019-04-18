@@ -20,8 +20,10 @@ public class LoginAccess extends AppCompatActivity {
     private static final String TAG = "LoginAccess";
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
+
     private Button btnCreateAccount;
     private Button btnSignIn;
+
     private EditText edtEmail;
     private EditText edtPassword;
 

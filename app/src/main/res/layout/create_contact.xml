@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,7 +16,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/create"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTitle"
+            android:layout_marginTop="50sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            />
 
         <EditText
             android:id="@+id/name"
@@ -20,7 +32,11 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/name"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:layout_marginTop="50sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            />
 
         <EditText
             android:id="@+id/lastName"
@@ -28,7 +44,10 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/lastname"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            />
 
         <EditText
             android:id="@+id/phone"
@@ -36,7 +55,10 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/phone"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            />
 
         <EditText
             android:id="@+id/cellphone"
@@ -44,14 +66,21 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/cellphone"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            />
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
+            android:background="@drawable/round_bg"
             android:onClick="save"
-            android:text="@string/save" />
+            android:text="@string/save"
+            android:layout_marginTop="80sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

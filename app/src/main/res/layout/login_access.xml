@@ -1,50 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-214dp"
+        tools:layout_editor_absoluteY="-149dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="100sp"
+            android:layout_marginRight="30sp"
             android:text="@string/login"
             android:textAlignment="center"
+            android:textColor="@color/colorTitle"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="30sp"
+            android:layout_marginRight="30sp"
             android:ems="10"
+            android:hint="@string/hint_email"
             android:inputType="textEmailAddress"
-            android:hint="@string/hint_email"/>
+
+            />
 
         <EditText
             android:id="@+id/edtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="30sp"
             android:ems="10"
-            android:inputType="textPassword"
-            android:hint="@string/hint_password"/>
+            android:hint="@string/hint_password"
+            android:inputType="textPassword" />
 
         <Button
             android:id="@+id/btnCreateAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="100sp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/round_bg"
             android:text="@string/create_account_button" />
 
         <Button
             android:id="@+id/btnSignIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="30sp"
+            android:background="@drawable/round_bg"
             android:text="@string/signin_button" />
 
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btnSignInGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="30sp"
+            android:text="@string/login_google" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
