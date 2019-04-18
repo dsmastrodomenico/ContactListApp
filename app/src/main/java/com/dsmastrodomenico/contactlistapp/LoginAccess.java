@@ -48,6 +48,7 @@ public class LoginAccess extends AppCompatActivity {
                 signIn(edtEmail.getText().toString(), edtPassword.getText().toString());
             }
         });
+        
     }
 
     private void inicialize() {
