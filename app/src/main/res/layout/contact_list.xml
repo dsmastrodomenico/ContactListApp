@@ -8,15 +8,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="10sp"
+        android:background="@drawable/round_bg_"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/txtNoResults"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30sp"
             android:text="@string/no_records"
             android:layout_marginLeft="30sp"
-            android:layout_marginTop="50sp"
+            android:layout_marginTop="20sp"
             android:layout_marginRight="30sp"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -27,6 +32,16 @@
         <ListView
             android:id="@+id/lvcontacts"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            android:layout_marginBottom="50sp"
+            android:background="@drawable/round_bg"
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/colorPrimaryDark"
+            android:divider="@color/colorBackground"
+            android:dividerHeight="1sp"
+            />
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

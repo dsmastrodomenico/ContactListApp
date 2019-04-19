@@ -2,7 +2,6 @@ package com.dsmastrodomenico.contactlistapp;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,19 +16,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.SignInButton;
-import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.GoogleAuthProvider;
-import java.lang.Object;
-import android.R.*;
 
 public class LoginAccess extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
     private static final String TAG = "LoginAccess";
@@ -40,7 +32,7 @@ public class LoginAccess extends AppCompatActivity implements GoogleApiClient.On
 
     private Button btnCreateAccount;
     private Button btnSignIn;
-    private SignInButton btnSignInGoogle;
+    private Button btnSignInGoogle;
 
     private EditText edtEmail;
     private EditText edtPassword;
@@ -52,12 +44,12 @@ public class LoginAccess extends AppCompatActivity implements GoogleApiClient.On
 
         btnCreateAccount = (Button)findViewById(R.id.btnCreateAccount);
         btnSignIn = (Button)findViewById(R.id.btnSignIn);
-        btnSignInGoogle = (SignInButton)findViewById(R.id.btnSignInGoogle);
+        btnSignInGoogle = (Button)findViewById(R.id.btnSignInGoogle);
 
         edtEmail =(EditText)findViewById(R.id.edtEmail);
         edtPassword =(EditText)findViewById(R.id.edtPassword);
 
-        inicialize();
+        initialize();
 
         btnCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,15 +74,15 @@ public class LoginAccess extends AppCompatActivity implements GoogleApiClient.On
         });
     }
 
-    private void inicialize() {
+    private void initialize() {
         firebaseAuth = FirebaseAuth.getInstance();
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
                 if(firebaseUser != null){
-                    Log.w(TAG, "onAuthStateChanged - signed_in" + firebaseUser.getUid());
-                    Log.w(TAG, "onAuthStateChanged - signed_in" + firebaseUser.getEmail());
+                    Log.w(TAG, "onAuthStateChanged - signed_in " + firebaseUser.getUid());
+                    Log.w(TAG, "onAuthStateChanged - signed_in " + firebaseUser.getEmail());
                 } else {
                     Log.w(TAG, "onAuthStateChanged - signed_out");
                 }
