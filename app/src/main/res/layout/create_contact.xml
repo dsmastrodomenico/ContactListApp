@@ -29,7 +29,8 @@
         <EditText
             android:id="@+id/name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/round_bg"
             android:ems="10"
             android:hint="@string/name"
             android:inputType="textPersonName"
@@ -41,10 +42,12 @@
         <EditText
             android:id="@+id/lastName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/round_bg"
             android:ems="10"
             android:hint="@string/lastname"
             android:inputType="textPersonName"
+            android:layout_marginTop="2sp"
             android:layout_marginLeft="30sp"
             android:layout_marginRight="30sp"
             />
@@ -52,10 +55,12 @@
         <EditText
             android:id="@+id/phone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/round_bg"
             android:ems="10"
             android:hint="@string/phone"
             android:inputType="phone"
+            android:layout_marginTop="2sp"
             android:layout_marginLeft="30sp"
             android:layout_marginRight="30sp"
             />
@@ -63,10 +68,12 @@
         <EditText
             android:id="@+id/cellphone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/round_bg"
             android:ems="10"
             android:hint="@string/cellphone"
             android:inputType="phone"
+            android:layout_marginTop="2sp"
             android:layout_marginLeft="30sp"
             android:layout_marginRight="30sp"
             />

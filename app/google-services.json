@@ -15,12 +15,24 @@
       },
       "oauth_client": [
         {
-          "client_id": "456917595223-dukhi1lf8hd7vhp8i5v2i9il2bgcnu3u.apps.googleusercontent.com",
+          "client_id": "456917595223-dve6qma5ai503j5t0ir2av9tfcvppgrk.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.dsmastrodomenico.contactlistapp",
             "certificate_hash": "f0a9224cfe7ff6c347d4a7dabefa1429189a6ca9"
           }
+        },
+        {
+          "client_id": "456917595223-dukhi1lf8hd7vhp8i5v2i9il2bgcnu3u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dsmastrodomenico.contactlistapp",
+            "certificate_hash": "0fedac1d9531c5bcbd88d53742ee1269f1b348d9"
+          }
+        },
+        {
+          "client_id": "456917595223-k5qn5ku3nj04j263gijd9vm1iuaa8s3m.apps.googleusercontent.com",
+          "client_type": 3
         }
       ],
       "api_key": [

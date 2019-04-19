@@ -24,6 +24,10 @@
     <string name="signout_button">Sign Out</string>
     <string name="login">Login</string>
     <string name="login_google">Login With Google</string>
+    <string name="google_authentication_success">Google Authentication Success</string>
+    <string name="google_authentication_unsuccess">Google Authentication Unsuccess</string>
+    <string name="google_sign_in_unsuccess">Google Sign In Unsuccess</string>
+    <string name="error_google_sign_out">Error In Google Sign Out</string>
 
     <string-array name="Menu">
         <item>@string/create</item>

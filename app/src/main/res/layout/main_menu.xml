@@ -54,6 +54,8 @@
                 android:layout_height="200sp"
                 android:layout_marginLeft="30sp"
                 android:layout_marginRight="30sp"
+                android:background="@drawable/round_bg"
+                android:divider="@color/colorTitle"
                 />
 
         </LinearLayout>
